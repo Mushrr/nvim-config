@@ -9,6 +9,7 @@ lsp.ensure_installed({
     'tsserver',
     'eslint',
     'rust_analyzer',
+    'pyright'
 })
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
@@ -23,5 +24,15 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+-- diagnostic
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = true,
+    update_in_insert = true,
+    underline = true,
+    severity_sort = false,
+    float = true,
+})
+
 
 
