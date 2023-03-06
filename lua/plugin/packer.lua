@@ -1,5 +1,12 @@
 vim.cmd.packadd("packer.nvim")
 return require('packer').startup( function(use) 
+    use {
+        's1n7ax/nvim-terminal',
+        config = function()
+            vim.o.hidden = true
+            require('nvim-terminal').setup()
+        end,
+    }
     use 'wbthomason/packer.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -36,4 +43,7 @@ return require('packer').startup( function(use)
             'nvim-tree/nvim-web-devicons', -- optional, for file icons
         },
     }
+    -- rust-tools
+    -- Adds extra functionality over rust analyzer
+    use("simrat39/rust-tools.nvim")
 end )
