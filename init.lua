@@ -1,0 +1,8 @@
+require('configuration')
+require('keymap')
+require('plugin.packer')
+require('plugin.telescope')
+require('plugin.treesitter')
+require('plugin.lsp')
+require('plugin.tree')
+require('theme')
