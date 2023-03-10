@@ -1,5 +1,10 @@
 vim.cmd.packadd("packer.nvim")
 return require('packer').startup( function(use) 
+    -- 状态栏美化
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
     use {
         's1n7ax/nvim-terminal',
         config = function()
@@ -39,11 +44,9 @@ return require('packer').startup( function(use)
     }
     use {
         'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
     }
     -- rust-tools
     -- Adds extra functionality over rust analyzer
     use("simrat39/rust-tools.nvim")
+    use "nvim-tree/nvim-web-devicons"
 end )

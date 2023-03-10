@@ -19,8 +19,13 @@ require("nvim-tree").setup({
 })
 
 local tree_api = require('nvim-tree.api')
-
-
-
 vim.keymap.set('n', '<leader>tt', function() tree_api.tree.open() end)
 vim.keymap.set('n', '<leader>tc', function() tree_api.tree.close() end)
+
+-- web icons
+
+require('nvim-web-devicons').setup({
+    color_icons = true,
+    default = true,
+    strict = true,
+})
