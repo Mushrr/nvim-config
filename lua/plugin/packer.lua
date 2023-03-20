@@ -1,5 +1,17 @@
-vim.cmd.packadd("packer.nvim")
+vim.cmd [[packadd packer.nvim]]
+
 return require('packer').startup( function(use) 
+    use {
+        's1n7ax/nvim-terminal',
+        config = function()
+            vim.o.hidden = true
+            local terminal = require('nvim-terminal')
+            print(terminal.DefaultTerminal);
+            terminal.setup({
+                
+            })
+        end,
+    }
     use 'wbthomason/packer.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }

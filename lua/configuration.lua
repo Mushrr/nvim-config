@@ -5,6 +5,7 @@ local configuration = {
     expandtab = true,
     nu = true,
     cursorline = true,
+    shell = "powershell",
 }
 
 for k, v in pairs(configuration) do
