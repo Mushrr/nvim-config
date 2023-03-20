@@ -1,5 +1,12 @@
 vim.cmd.packadd("packer.nvim")
 return require('packer').startup( function(use) 
+    use { "bluz71/vim-nightfly-colors", as = "nightfly" }
+    use 'folke/tokyonight.nvim'
+    -- auto pairs
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
     -- 状态栏美化
     use {
         'nvim-lualine/lualine.nvim',
