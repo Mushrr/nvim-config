@@ -1,5 +1,12 @@
 vim.cmd.packadd("packer.nvim")
 return require('packer').startup( function(use) 
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use {
+        'b3nj5m1n/kommentary',
+        config = function() 
+            require("kommentary.config").use_extended_mappings()
+        end
+    }
     use { "bluz71/vim-nightfly-colors", as = "nightfly" }
     use 'folke/tokyonight.nvim'
     -- auto pairs
