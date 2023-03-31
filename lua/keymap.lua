@@ -18,6 +18,10 @@ function quick_exec()
     then
         command = string.format('cargo run')
         support = true
+    elseif filetype == 'java'
+    then
+        command = string.format('java %s', current_file_name)
+        support = true
     end
     if support
     then

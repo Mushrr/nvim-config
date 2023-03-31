@@ -12,4 +12,3 @@ for k, v in pairs(configuration) do
 end
 
 
-vim.cmd.colorscheme("catppuccin")
