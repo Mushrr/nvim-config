@@ -1,5 +1,7 @@
 vim.cmd.packadd("packer.nvim")
 return require('packer').startup( function(use) 
+    -- wakatime
+    use 'wakatime/vim-wakatime'
     -- system copy
     use 'christoomey/vim-system-copy'
     use({ 'rose-pine/neovim', as = 'rose-pine' })
